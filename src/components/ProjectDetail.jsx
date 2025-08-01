@@ -14,6 +14,11 @@ const TECH_ICONS = {
   Javascript: Code,
   HTML: Code,
   CSS: Code,
+  PHP: Code2,
+  Laravel: Code2,
+  CodeIgniter: Code2,
+  Bootstrap: Layout,
+  'Node.js': Cpu,
   default: Package,
 };
 
@@ -57,7 +62,7 @@ const ProjectStats = ({ project }) => {
 
       <div className="relative z-10 flex items-center space-x-2 md:space-x-3 bg-white/5 p-2 md:p-3 rounded-lg border border-blue-500/20 transition-all duration-300 hover:scale-105 hover:border-blue-500/50 hover:shadow-lg">
         <div className="bg-blue-500/20 p-1.5 md:p-2 rounded-full">
-          <Code2 className="text-blue-300 w-4 h-4 md:w-6 md:h-6" strokeWidth={1.5} />
+          <Layers className="text-blue-300 w-4 h-4 md:w-6 md:h-6" strokeWidth={1.5} />
         </div>
         <div className="flex-grow">
           <div className="text-lg md:text-xl font-semibold text-blue-200">{techStackCount}</div>
@@ -110,7 +115,7 @@ const ProjectDetails = () => {
         ...selectedProject,
         Features: selectedProject.Features || [],
         TechStack: selectedProject.TechStack || [],
-        Github: selectedProject.Github || 'https://github.com/EkiZR',
+        Github: selectedProject.Github || 'https://github.com/8farhanma',
       };
       setProject(enhancedProject);
     }
@@ -204,7 +209,7 @@ const ProjectDetails = () => {
 
               <div className="space-y-4 md:space-y-6">
                 <h3 className="text-lg md:text-xl font-semibold text-white/90 mt-[3rem] md:mt-0 flex items-center gap-2 md:gap-3">
-                  <Code2 className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
+                  <Layers className="w-4 h-4 md:w-5 md:h-5 text-blue-400" />
                   Technologies Used
                 </h3>
                 {project.TechStack.length > 0 ? (
@@ -224,10 +229,14 @@ const ProjectDetails = () => {
               
                 <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img
-                  src={project.Img}
+                  src={project.Img.startsWith('http') ? project.Img : `/${project.Img}`}
                   alt={project.Title}
-                  className="w-full  object-cover transform transition-transform duration-700 will-change-transform group-hover:scale-105"
+                  className="w-full object-cover transform transition-transform duration-700 will-change-transform group-hover:scale-105"
                   onLoad={() => setIsImageLoaded(true)}
+                  onError={(e) => {
+                    console.error('Failed to load image:', project.Img);
+                    e.target.style.display = 'none';
+                  }}
                 />
                 <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-300 rounded-2xl" />
               </div>

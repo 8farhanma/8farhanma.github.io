@@ -108,14 +108,21 @@ const techStacks = [
   { icon: "css.svg", language: "CSS" },
   { icon: "javascript.svg", language: "JavaScript" },
   { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "vite.svg", language: "Vite" },
-  { icon: "nodejs.svg", language: "Node JS" },
   { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
+  { icon: "php.svg", language: "PHP" },
+  { icon: "laravel.svg", language: "Laravel" },
+  { icon: "codeigniter.svg", language: "CodeIgniter" },
+  { icon: "python.svg", language: "Python" },
+  { icon: "googlecloud.svg", language: "Google Cloud" },
+  { icon: "conda.svg", language: "Conda" },
+  { icon: "reactjs.svg", language: "React" },
+  // { icon: "vite.svg", language: "Vite" },
+  { icon: "nodejs.svg", language: "Node JS" },
+  { icon: "mysql.svg", language: "MySQL" },
+  // { icon: "firebase.svg", language: "Firebase" },
+  // { icon: "MUI.svg", language: "Material UI" },
+  // { icon: "vercel.svg", language: "Vercel" },
+  // { icon: "SweetAlert.svg", language: "SweetAlert2" },
 ];
 
 export default function FullWidthTabs() {
@@ -140,7 +147,7 @@ export default function FullWidthTabs() {
       // Mengambil data dari Supabase secara paralel
       const [projectsResponse, certificatesResponse] = await Promise.all([
         supabase.from("projects").select("*").order('id', { ascending: true }),
-        supabase.from("certificates").select("*").order('id', { ascending: true }), 
+        supabase.from("certificates").select("*").order('id', { ascending: false }), 
       ]);
 
       // Error handling untuk setiap request
