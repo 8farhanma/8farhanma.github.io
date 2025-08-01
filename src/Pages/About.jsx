@@ -236,12 +236,12 @@ const AboutPage = () => {
         </div>
         
         <blockquote className="text-gray-300 text-center lg:text-left italic font-medium text-sm relative z-10 pl-6">
-          "Leveraging AI as a professional tool, not a replacement."
+          “Bukan soal seberapa canggih aplikasi dibuat, tapi seberapa berguna ia bagi penggunanya.”
         </blockquote>
       </div>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <a href="#" className="w-full lg:w-auto">
+              <a href="https://drive.usercontent.google.com/download?id=19O5-oJaR6WDi2oSu4TnncMg6tlrcP7jO&export=download&authuser=0&confirm=t&uuid=4f48e05e-194d-4bc8-bdc2-7f4f88c530f4&at=AN8xHoqD_d4ERFduJ_yTv6flzonJ:1754078590575" className="w-full lg:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="800"
