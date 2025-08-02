@@ -78,7 +78,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 const WORDS = ["Information Technology and Computers Student", "Tech Enthusiast"];
-const TECH_STACK = ["Laravel", "CodeIgniter", "Javascript", "Python","React","Node.js"];
+const TECH_STACK = ["Laravel", "CodeIgniter", "Python", "React", "Node.js"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/8farhanma" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/8farhanma" },
