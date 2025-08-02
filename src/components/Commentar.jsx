@@ -267,25 +267,25 @@ const Komentar = () => {
     }, []);
 
     // Fetch regular comments (excluding pinned) and set up real-time subscription
-    useEffect(() => {
-        const fetchComments = async () => {
-            const { data, error } = await supabase
-                .from('portfolio_comments')
-                .select('*')
-                .eq('is_pinned', false)
-                .order('created_at', { ascending: false });
-            
-            if (error) {
-                console.error('Error fetching comments:', error);
-                return;
-            }
-            
-            setComments(data || []);
-        };
+    const fetchComments = useCallback(async () => {
+        const { data, error } = await supabase
+            .from('portfolio_comments')
+            .select('*')
+            .eq('is_pinned', false)
+            .order('created_at', { ascending: false });
+        
+        if (error) {
+            console.error('Error fetching comments:', error);
+            return;
+        }
+        
+        setComments(data || []);
+    }, []);
 
+    // Fetch regular comments (excluding pinned) and set up real-time subscription
+    useEffect(() => {
         fetchComments();
 
-        // Set up real-time subscription
         const subscription = supabase
             .channel('portfolio_comments')
             .on('postgres_changes', 
@@ -295,16 +295,14 @@ const Komentar = () => {
                     table: 'portfolio_comments',
                     filter: 'is_pinned=eq.false'
                 }, 
-                () => {
-                    fetchComments(); // Refresh comments when changes occur
-                }
+                fetchComments
             )
             .subscribe();
 
         return () => {
             subscription.unsubscribe();
         };
-    }, []);
+    }, [fetchComments]);
 
     const uploadImage = useCallback(async (imageFile) => {
         if (!imageFile) return null;
@@ -350,13 +348,17 @@ const Komentar = () => {
             if (error) {
                 throw error;
             }
+
+            // Manually refetch comments to update the UI instantly
+            fetchComments();
+
         } catch (error) {
             setError('Failed to post comment. Please try again.');
             console.error('Error adding comment: ', error);
         } finally {
             setIsSubmitting(false);
         }
-    }, [uploadImage]);
+    }, [uploadImage, fetchComments]);
 
     const formatDate = useCallback((timestamp) => {
         if (!timestamp) return '';
