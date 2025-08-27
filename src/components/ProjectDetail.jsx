@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
-  ArrowLeft, ExternalLink, Github, Code2, Star,
+  ArrowLeft, ExternalLink, Code2, Star,
   ChevronRight, Layers, Layout, Package, Cpu, Code, Database
 } from "lucide-react";
 import Swal from 'sweetalert2';
 
 const TECH_ICONS = {
-  React: Code2,
-  Tailwind: Layout,
+  ReactJS: Code2,
+  TailwindCSS: Layout,
   Python: Code,
-  Javascript: Code,
+  JavaScript: Code,
   HTML: Code,
   CSS: Code,
   PHP: Code,
@@ -18,7 +18,7 @@ const TECH_ICONS = {
   CodeIgniter: Code2,
   Groq: Cpu,
   Bootstrap: Layout,
-  'Node.js': Code2,
+  NodeJS: Code2,
   MySQL: Database,
   PostgreSQL: Database,
   Conda : Cpu,
