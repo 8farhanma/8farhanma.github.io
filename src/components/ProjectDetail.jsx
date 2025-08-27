@@ -9,7 +9,6 @@ import Swal from 'sweetalert2';
 const TECH_ICONS = {
   React: Code2,
   Tailwind: Layout,
-  Express: Cpu,
   Python: Code,
   Javascript: Code,
   HTML: Code,
@@ -19,8 +18,10 @@ const TECH_ICONS = {
   CodeIgniter: Code2,
   Groq: Cpu,
   Bootstrap: Layout,
-  'Node.js': Cpu,
+  'Node.js': code2,
   MySQL: database,
+  PostgreSQL: database,
+  Conda : Cpu,
   default: Package,
 };
 
