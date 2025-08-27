@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   ArrowLeft, ExternalLink, Github, Code2, Star,
-  ChevronRight, Layers, Layout, Globe, Package, Cpu, Code,
+  ChevronRight, Layers, Layout, Globe, Package, Cpu, Code, database
 } from "lucide-react";
 import Swal from 'sweetalert2';
 
 const TECH_ICONS = {
-  React: Globe,
+  React: Code2,
   Tailwind: Layout,
   Express: Cpu,
   Python: Code,
@@ -20,6 +20,7 @@ const TECH_ICONS = {
   Groq: Cpu,
   Bootstrap: Layout,
   'Node.js': Cpu,
+  MySQL: database,
   default: Package,
 };
 
