@@ -92,8 +92,9 @@ const techStacks = [
   { icon: "conda.svg", language: "Conda" },
   { icon: "reactjs.svg", language: "ReactJS" },
   { icon: "nodejs.svg", language: "NodeJS" },
-  { icon: "googlecloud.svg", language: "Google Cloud Platform" },
+  { icon: "googlecloud.svg", language: "GCP" },
   { icon: "mysql.svg", language: "MySQL" },
+  { icon: "postgresql.svg", language: "PostgreSQL" },
   { icon: "figma.svg", language: "Figma" },
   { icon: "github.svg", language: "Github" },
 ];
