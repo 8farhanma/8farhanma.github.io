@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages # Or your default branch
+      - main # Or your default branch
 
 permissions:
   contents: write
