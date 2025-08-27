@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   ArrowLeft, ExternalLink, Github, Code2, Star,
-  ChevronRight, Layers, Layout, Globe, Package, Cpu, Code, database
+  ChevronRight, Layers, Layout, Package, Cpu, Code, Database
 } from "lucide-react";
 import Swal from 'sweetalert2';
 
@@ -18,9 +18,9 @@ const TECH_ICONS = {
   CodeIgniter: Code2,
   Groq: Cpu,
   Bootstrap: Layout,
-  'Node.js': code2,
-  MySQL: database,
-  PostgreSQL: database,
+  'Node.js': Code2,
+  MySQL: Database,
+  PostgreSQL: Database,
   Conda : Cpu,
   default: Package,
 };
