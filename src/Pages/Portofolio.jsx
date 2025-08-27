@@ -90,10 +90,11 @@ const techStacks = [
   { icon: "codeigniter.svg", language: "CodeIgniter" },
   { icon: "python.svg", language: "Python" },
   { icon: "conda.svg", language: "Conda" },
-  { icon: "reactjs.svg", language: "React" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "googlecloud.svg", language: "Google Cloud" },
+  { icon: "reactjs.svg", language: "ReactJS" },
+  { icon: "nodejs.svg", language: "NodeJS" },
+  { icon: "googlecloud.svg", language: "Google Cloud Platform" },
   { icon: "mysql.svg", language: "MySQL" },
+  { icon: "figma.svg", language: "Figma" },
   { icon: "github.svg", language: "Github" },
 ];
 
