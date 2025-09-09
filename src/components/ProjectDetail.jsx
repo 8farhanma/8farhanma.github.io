@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
-  ArrowLeft, ExternalLink, Code2, Star,
+  ArrowLeft, ExternalLink, Code2, Star, Github,
   ChevronRight, Layers, Layout, Package, Cpu, Code, Database
 } from "lucide-react";
 import Swal from 'sweetalert2';
