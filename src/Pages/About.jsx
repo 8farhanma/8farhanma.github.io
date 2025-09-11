@@ -217,11 +217,11 @@ const AboutPage = () => {
             Lulusan D3 Sistem Informasi Politeknik Negeri Subang, aktif di organisasi HIMATIKOM sebagai Staff
             Departemen Riset dan Teknologi periode 2022/2023. Berpengalaman dalam pengembangan sebuah
             perangkat lunak pada saat magang kerja selama 6 bulan sebagai software engineer di PT Inditek
-Global Medika. Menguasai dasar algoritma, struktur data, beberapa bahasa pemrograman,
-manajemen basis data, serta tools pendukung pengembangan perangkat lunak. Terbiasa bekerja
-secara kolaboratif, memiliki kemampuan komunikasi yang baik, dan didukung oleh pengalaman
-organisasi serta sertifikasi Microsoft Excel dan Word. Memiliki minat berkarir di bidang Software
-Engineering, serta terus mengembangkan keterampilan teknis dan non-teknis yang relevan. 
+            Global Medika. Menguasai dasar algoritma, struktur data, beberapa bahasa pemrograman,
+            manajemen basis data, serta tools pendukung pengembangan perangkat lunak. Terbiasa bekerja
+            secara kolaboratif, memiliki kemampuan komunikasi yang baik, dan didukung oleh pengalaman
+            organisasi serta sertifikasi-sertifikasi keterampilan profesional. Memiliki minat berkarir di bidang Software
+            Engineering, serta terus mengembangkan keterampilan teknis dan non-teknis yang relevan. 
             </p>
 
                {/* Quote Section */}
