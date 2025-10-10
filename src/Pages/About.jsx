@@ -214,14 +214,13 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-            Lulusan D3 Sistem Informasi Politeknik Negeri Subang, aktif di organisasi HIMATIKOM sebagai Staff
-            Departemen Riset dan Teknologi periode 2022/2023. Berpengalaman dalam pengembangan sebuah
-            perangkat lunak pada saat magang kerja selama 6 bulan sebagai software engineer di PT Inditek
-            Global Medika. Menguasai dasar algoritma, struktur data, beberapa bahasa pemrograman,
-            manajemen basis data, serta tools pendukung pengembangan perangkat lunak. Terbiasa bekerja
-            secara kolaboratif, memiliki kemampuan komunikasi yang baik, dan didukung oleh pengalaman
-            organisasi serta sertifikasi-sertifikasi keterampilan profesional. Memiliki minat berkarir di bidang Software
-            Engineering, serta terus mengembangkan keterampilan teknis dan non-teknis yang relevan. 
+            A graduate of the Diploma in Information Systems from Politeknik Negeri Subang with a GPA of 3.81, 
+            pursuing a career in Software Engineering. Proficient in PHP, Laravel, CodeIgniter, MySQL, and GitHub. 
+            Completed a 6-month internship as a Full Stack Web Developer, gaining strong skills in algorithm and 
+            data structure comprehension, Software Development Life Cycle (SDLC) implementation, version control 
+            tools, and team-based software development. Highly enthusiastic about leveraging analytical thinking 
+            and problem-solving abilities to design, develop, and optimize software solutions. Certified in the 
+            Software Engineer Competency Scheme by BNSP LSP TIK Indonesia in 2025. 
             </p>
 
                {/* Quote Section */}
@@ -242,7 +241,7 @@ const AboutPage = () => {
         </div>
         
         <blockquote className="text-gray-300 text-center lg:text-left italic font-medium text-sm relative z-10 pl-6">
-          “Bukan soal seberapa canggih aplikasi dibuat, tapi seberapa berguna itu bagi penggunanya.”
+          “It’s not about how sophisticated the application is, but how useful it is to its users.”
         </blockquote>
       </div>
 

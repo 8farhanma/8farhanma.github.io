@@ -77,7 +77,7 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Fresh Graduate of Information Systems", "Tech Enthusiast"];
+const WORDS = ["Fresh Graduate of Information Systems","Full Stack Web Developer","Tech Enthusiast"];
 const TECH_STACK = ["Laravel", "CodeIgniter", "Python", "ReactJS", "MySQL"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/8farhanma" },
@@ -179,7 +179,7 @@ const Home = () => {
                 <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                   data-aos="fade-up"
                   data-aos-delay="1000">
-                  Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                  Creating Innovative, Functional, and User-Friendly Websites for Digital Solutions.
                 </p>
 
                 {/* Tech Stack */}

@@ -17,7 +17,7 @@ const Comment = memo(({ comment, formatDate, index, isPinned = false }) => (
         {isPinned && (
             <div className="flex items-center gap-2 mb-3 text-teal-400">
                 <Pin className="w-4 h-4" />
-                <span className="text-xs font-medium uppercase tracking-wide">Komentar Disematkan</span>
+                <span className="text-xs font-medium uppercase tracking-wide">Pinned Comment</span>
             </div>
         )}
         <div className="flex items-start gap-3">
@@ -76,7 +76,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
         if (file) {
             // Check file size (5MB limit)
             if (file.size > 5 * 1024 * 1024) {
-                alert('Ukuran file harus kurang dari 5MB. Silakan pilih gambar yang lebih kecil.');
+                alert('The file size must be less than 5MB. Please select a smaller image.');
                 // Reset the input
                 if (e.target) e.target.value = '';
                 return;
@@ -84,7 +84,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
             
             // Check file type
             if (!file.type.startsWith('image/')) {
-                alert('Silakan pilih file gambar yang valid.');
+                alert('Please select a valid image file.');
                 if (e.target) e.target.value = '';
                 return;
             }
@@ -128,7 +128,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                      maxLength={15}
-                    placeholder="Masukkan nama Anda"
+                    placeholder="Please enter your name"
                     className="w-full p-3 rounded-xl bg-gray-900/70 border-gray-700 text-neutral-200 placeholder-gray-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
                     required
                 />
@@ -136,7 +136,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
 
             <div className="space-y-2" data-aos="fade-up" data-aos-duration="1200">
                 <label className="block text-sm font-medium text-white">
-                    Pesan <span className="text-red-400">*</span>
+                    Message <span className="text-red-400">*</span>
                 </label>
                 <textarea
                     ref={textareaRef}
@@ -144,7 +144,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                      maxLength={200}
 
                     onChange={handleTextareaChange}
-                    placeholder="Tulis pesan Anda di sini..."
+                    placeholder="Write your message here..."
                     className="w-full p-4 rounded-xl bg-gray-900/70 border-gray-700 text-neutral-200 placeholder-gray-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all resize-none min-h-[120px]"
                     required
                 />
@@ -152,14 +152,14 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
 
             <div className="space-y-2" data-aos="fade-up" data-aos-duration="1400">
                 <label className="block text-sm font-medium text-white">
-                    Foto Profil <span className="text-gray-400">(opsional)</span>
+                    Profile Photo <span className="text-gray-400">(optional)</span>
                 </label>
                 <div className="flex items-center gap-4 p-4 bg-gray-900/70 border-gray-700 rounded-xl">
                     {imagePreview ? (
                         <div className="flex items-center gap-4">
                             <img
                                 src={imagePreview}
-                                alt="Pratinjau profil"
+                                alt="Profile photo"
                                 className="w-16 h-16 rounded-full object-cover border-2 border-teal-500/50"
                             />
                             <button
@@ -172,7 +172,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                                 className="flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 text-red-400 hover:bg-red-500/30 transition-all group"
                             >
                                 <X className="w-4 h-4" />
-                                <span>Hapus Foto</span>
+                                <span>Remove Photo</span>
                             </button>
                         </div>
                     ) : (
@@ -190,10 +190,10 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                                 className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-teal-500/20 text-teal-400 hover:bg-teal-500/30 transition-all border border-dashed border-teal-500/50 hover:border-teal-500 group"
                             >
                                 <ImagePlus className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                                <span>Pilih Foto Profil</span>
+                                <span>Choose Profile Photo</span>
                             </button>
                             <p className="text-center text-gray-400 text-sm mt-2">
-                                Ukuran file maks: 5MB
+                                Max file size: 5MB
                             </p>
                         </div>
                     )}
@@ -211,12 +211,12 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                     {isSubmitting ? (
                         <>
                             <Loader2 className="w-4 h-4 animate-spin" />
-                            <span>Mengirim...</span>
+                            <span>Sending...</span>
                         </>
                     ) : (
                         <>
                             <Send className="w-4 h-4" />
-                            <span>Kirim Komentar</span>
+                            <span>Send Comment</span>
                         </>
                     )}
                 </div>
@@ -353,7 +353,7 @@ const Komentar = () => {
             fetchComments();
 
         } catch (error) {
-            setError('Gagal mengirim komentar. Silakan coba lagi.');
+            setError('Failed to send comment. Please try again.');
             console.error('Error adding comment: ', error);
         } finally {
             setIsSubmitting(false);
@@ -368,12 +368,12 @@ const Komentar = () => {
         const diffHours = Math.floor(diffMinutes / 60);
         const diffDays = Math.floor(diffHours / 24);
 
-        if (diffMinutes < 1) return 'Baru saja';
-        if (diffMinutes < 60) return `${diffMinutes}m yang lalu`;
-        if (diffHours < 24) return `${diffHours}j yang lalu`;
-        if (diffDays < 7) return `${diffDays}h yang lalu`;
+        if (diffMinutes < 1) return 'Just now';
+        if (diffMinutes < 60) return `${diffMinutes}m ago`;
+        if (diffHours < 24) return `${diffHours}h ago`;
+        if (diffDays < 7) return `${diffDays}d ago`;
 
-        return new Intl.DateTimeFormat('id-ID', {
+        return new Intl.DateTimeFormat('en-US', {
             year: 'numeric',
             month: 'short',
             day: 'numeric'
@@ -391,7 +391,7 @@ const Komentar = () => {
                         <MessageCircle className="w-6 h-6 text-teal-400" />
                     </div>
                     <h3 className="text-xl font-semibold text-white">
-                        Komentar <span className="text-teal-400">({totalComments})</span>
+                        Comments <span className="text-teal-400">({totalComments})</span>
                     </h3>
                 </div>
             </div>
@@ -424,7 +424,7 @@ const Komentar = () => {
                     {comments.length === 0 && !pinnedComment ? (
                         <div className="text-center py-8" data-aos="fade-in">
                             <UserCircle2 className="w-12 h-12 text-teal-400 mx-auto mb-3 opacity-50" />
-                            <p className="text-gray-400">Belum ada komentar. Mulai percakapan!</p>
+                            <p className="text-gray-400">No comments yet. Start the conversation!</p>
                         </div>
                     ) : (
                         comments.map((comment, index) => (
