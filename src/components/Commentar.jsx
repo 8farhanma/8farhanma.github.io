@@ -121,7 +121,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
         <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2" data-aos="fade-up" data-aos-duration="1000">
                 <label className="block text-sm font-medium text-white">
-                    Nama <span className="text-red-400">*</span>
+                    Name <span className="text-red-400">*</span>
                 </label>
                 <input
                     type="text"
