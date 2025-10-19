@@ -77,8 +77,8 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Fresh Graduate of Information Systems","Certified BNSP (Software Engineer)","Full Stack Web Developer","System Analyst","Freelance","Tech Enthusiast"];
-const TECH_STACK = ["PHP","Laravel", "CodeIgniter", "MySQL", "UML Tool"];
+const WORDS = ["Fresh Graduate of Information Systems","Certified BNSP (Software Engineer)","Full Stack Web Developer","System Analyst","Freelancer","Tech Enthusiast"];
+const TECH_STACK = ["PHP","Laravel", "CodeIgniter", "MySQL", "UML Tools"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/8farhanma" },
   { icon: Linkedin, link: "https://www.linkedin.com/in/8farhanma" },
