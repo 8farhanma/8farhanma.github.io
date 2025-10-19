@@ -94,9 +94,10 @@ const techStacks = [
   { icon: "nodejs.svg", language: "NodeJS" },
   { icon: "googlecloud.svg", language: "GCP" },
   { icon: "mysql.svg", language: "MySQL" },
-  { icon: "postgresql.svg", language: "PostgreSQL" },
   { icon: "figma.svg", language: "Figma" },
   { icon: "github.svg", language: "Github" },
+  { icon: "postman.svg", language: "Postman" },
+  { icon: "maptiler.svg", language: "Maptiler" },
 ];
 
 export default function FullWidthTabs() {
